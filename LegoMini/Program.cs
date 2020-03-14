@@ -23,7 +23,7 @@ namespace LegoMini
                 Shoes = ShoeType.FlipFlops
             };
 
-            var torso = new AstronautTorso
+            var atorso = new AstronautTorso
             {
                 HandType = HandType.Baby,
                 ChiseledAbs = true,
@@ -31,7 +31,15 @@ namespace LegoMini
                 Shirted = true
             };
 
-            var astronaut = new Astronaut("Space Person", "Janitor", head, torso, legs);
+            var dtorso = new AstronautTorso
+            {
+                HandType = HandType.Baby,
+                ChiseledAbs = true,
+                NumberOfArms = 3,
+                Shirted = true
+            };
+
+            var astronaut = new Astronaut("Space Person", "Janitor", head, atorso, legs);
 
             astronaut.DoYourJob();
 

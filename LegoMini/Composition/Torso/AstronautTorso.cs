@@ -4,14 +4,13 @@ using System.Text;
 
 namespace LegoMini.Composition.Torso
 {
-    class AstronautTorso
+    class AstronautTorso : TorsoBase // My class AstronautTorso is a Torsobase(inheritance)
     {
         public int NumberOfArms { get; set; }
-        public bool ChiseledAbs { get; set; }
-        public bool Shirted { get; set; }
-        public HandType HandType { get; set; }
 
-        public void Flex()
+        public override bool ChiseledAbs { get; set; }
+
+        public override void Flex() //This is related to TorsoBase, override keyword
         {
             if(ChiseledAbs && !Shirted)
             {
@@ -26,14 +25,10 @@ namespace LegoMini.Composition.Torso
                 Console.WriteLine("Weird flex, but ok.");
             }
         }
+        public override void Breathe()
+        {
+            Console.WriteLine("Exhale, Inhale....");
+        }
     }
-    enum HandType
-    {
-        Human,
-        Robot,
-        Baby,
-        Tentacles,
-        CanadaArm,
-        XBuster
-    }
+
 }

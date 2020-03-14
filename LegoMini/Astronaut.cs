@@ -28,11 +28,11 @@ namespace LegoMini
         //made a constructor(assesbility mod, name, params)- they need to have the same name as the class
 
 
-
-
         public AstronautTorso Torso { get; set; }
         public AstronautLegs Legs { get; set; }
         public AstronautHead Head { get; set; }
+
+
         public Astronaut(string name, string job, AstronautHead head, AstronautTorso torso, AstronautLegs legs)
         {
             Name = name;
